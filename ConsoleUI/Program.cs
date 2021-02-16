@@ -20,7 +20,9 @@ namespace ConsoleUI
             //productManager.GetAll().ForEach(p => Console.WriteLine(p.ProductName));
             //productManager.GetAllByCategoryId(2).ForEach(p => Console.WriteLine(p.ProductName));
 
-            productManager.GetProductDetail().ForEach(p => Console.WriteLine(p.ProductName + " / " + p.CategoryName));
+            var result = productManager.GetProductDetail();
+            if (result.Success) result.Data.ForEach(p => Console.WriteLine(p.ProductName + " / " + p.CategoryName));
+            else Console.WriteLine(result.Message);
         }
 
         private static void CategoryTest()
