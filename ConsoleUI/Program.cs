@@ -1,7 +1,6 @@
 ﻿using System;
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
-using DataAccess.Concrete.InMemory;
 
 namespace ConsoleUI
 {
@@ -9,13 +8,13 @@ namespace ConsoleUI
     {
         private static void Main(string[] args)
         {
-            ProductTest();
+            //ProductTest();
             //CategoryTest();
         }
 
         private static void ProductTest()
         {
-            ProductManager productManager = new ProductManager(new EfProductDal());
+            var productManager = new ProductManager(new EfProductDal(), new CategoryManager(new EfCategoryDal()));
 
             //productManager.GetAll().ForEach(p => Console.WriteLine(p.ProductName));
             //productManager.GetAllByCategoryId(2).ForEach(p => Console.WriteLine(p.ProductName));
@@ -27,8 +26,8 @@ namespace ConsoleUI
 
         private static void CategoryTest()
         {
-            CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
-            categoryManager.GetAll().ForEach(c => Console.WriteLine(c.CategoryName));
+            var categoryManager = new CategoryManager(new EfCategoryDal());
+            categoryManager.GetAll().Data.ForEach(c => Console.WriteLine(c.CategoryName));
         }
     }
 }
