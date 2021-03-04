@@ -13,7 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{96D66AA6-209B-49F7-B936-66364845721F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{AE8E0239-C0AF-49D8-A2A4-D839B8FDD037}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{AE8E0239-C0AF-49D8-A2A4-D839B8FDD037}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AAA93EBC-33C3-4377-9D74-1E1D73BA0C70}"
 	ProjectSection(SolutionItems) = preProject
 		NorthwindDatabase.sql = NorthwindDatabase.sql
