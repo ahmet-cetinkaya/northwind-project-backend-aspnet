@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Castle.DynamicProxy;
-using Core.CrossCuttingConcers.Validation.FluentValidation;
+using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using Core.Utilities.Interceptors;
 using FluentValidation;
 
