@@ -23,4 +23,3 @@ CREATE TABLE [dbo].[OperationClaims] (
     [Name] VARCHAR (250) NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
-

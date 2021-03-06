@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{23C1DF44-DF41-4AE7-A2D2-68A5FF36B02A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{B47756E3-8A09-401C-A812-CF599F5881F8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{74063141-EED5-49F5-957D-60DDD01CB4DF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{96D66AA6-209B-49F7-B936-66364845721F}"
@@ -17,7 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AAA93EBC-33C3-4377-9D74-1E1D73BA0C70}"
 	ProjectSection(SolutionItems) = preProject
-		NorthwindDatabase.sql = NorthwindDatabase.sql
 		NorthwindProject.sql = NorthwindProject.sql
 	EndProjectSection
 EndProject
@@ -35,10 +32,6 @@ Global
 		{23C1DF44-DF41-4AE7-A2D2-68A5FF36B02A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23C1DF44-DF41-4AE7-A2D2-68A5FF36B02A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23C1DF44-DF41-4AE7-A2D2-68A5FF36B02A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B47756E3-8A09-401C-A812-CF599F5881F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B47756E3-8A09-401C-A812-CF599F5881F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B47756E3-8A09-401C-A812-CF599F5881F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B47756E3-8A09-401C-A812-CF599F5881F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{74063141-EED5-49F5-957D-60DDD01CB4DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74063141-EED5-49F5-957D-60DDD01CB4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74063141-EED5-49F5-957D-60DDD01CB4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
