@@ -1,6 +1,8 @@
+using System.Reflection;
 using Core.DependencyResolvers;
 using Core.Extensions;
 using Core.Utilities.IoC;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,11 +24,15 @@ namespace MVCWebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                .AddFluentValidation(option => option.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly()));
+
+            services.AddSession();
             services.AddDependencyResolvers(new ICoreModule[]
             {
                 new CoreModule()
             });
+            services.AddScoped<ICartSessionHelper, CartSessionHelper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +54,7 @@ namespace MVCWebUI
 
             app.UseRouting();
 
+            app.UseSession();
 
             app.UseAuthorization();
 

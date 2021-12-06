@@ -21,6 +21,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="Index">Cart</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -28,6 +31,12 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            @if (TempData["message"] != null)
+            {
+                <div class="alert alert-info w-100">
+                    @TempData["message"]
+                </div>
+            }
             <div class="row">
                 <div class="col-3">
                     @await Component.InvokeAsync("CategoryList")
