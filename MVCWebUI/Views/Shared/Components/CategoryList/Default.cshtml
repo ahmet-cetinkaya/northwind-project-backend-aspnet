@@ -1,0 +1,12 @@
+﻿@model CategoryListViewModel
+
+<ul class="list-group">
+    <li class="list-group-item @(@Model.ActiveCategoryId==0?"active":"")"> <a href="/product/index">All</a></li>
+    @foreach (var category in Model.Categories)
+    {
+        <li class="list-group-item @(@Model.ActiveCategoryId==@category.CategoryId?"active text-light":"")">
+            <a href="/product/index?category=@category.CategoryId">@category.CategoryName</a>
+        </li>
+    }
+
+</ul>
